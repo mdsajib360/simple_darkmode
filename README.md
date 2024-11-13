@@ -88,11 +88,7 @@ Define the base styles for the toggle switch and the circle indicator:
 Define the functions to add or remove dark mode styling based on the theme setting:
 
     const  theme  =  localStorage.getItem("theme")
-    theme  ===  "dark"  ?  darkMode() :  lightMode()
-
-  
-
-Let’s create darkMode & LightMode function:
+    theme  ===  "dark"  ?  darkMode() :  lightMode();
 
      function darkMode() {
   
