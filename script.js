@@ -47,4 +47,3 @@ dark_button.addEventListener("click", () => {
   const theme = localStorage.getItem("theme")
   theme === "dark" ? darkMode() : lightMode()
 })
-

@@ -12,11 +12,13 @@ Start by setting up a simple HTML structure. You can also find this code on my  
 
 index.html
 
-    <div  id="dark">
+    <body id="_body">
+         <div id="dark">
+            <div id="circle"></div>
+        </div>
     
-    <div  id="circle"></div>
-    
-    </div>
+        <script src="./script.js"></script>
+    </body>
 
   
 
@@ -92,19 +94,21 @@ Define the functions to add or remove dark mode styling based on the theme setti
 
 Let’s create darkMode & LightMode function:
 
-    function  darkMode() {
-    body.classList.add("dark_mode")
-    circle.classList.add("toggle")
-    circle.style.background  =  "#524b38";
-    localStorage.setItem("theme", "dark")
-    
+     function darkMode() {
+  
+         body.classList.add("dark_mode")
+         circle.classList.add("toggle")
+         circle.style.background = "#E2EAF4";
+ 
+         localStorage.setItem("theme", "dark")
     }
     
-    function  lightMode() {
-    body.classList.remove("dark_mode");
-    circle.classList.remove("toggle")
-    circle.style.background  =  "#fff";
-    localStorage.setItem("theme", "light")
+    function lightMode() {
+    
+      body.classList.remove("dark_mode");
+      circle.classList.remove("toggle")
+      circle.style.background = "#524b38";
+      localStorage.setItem("theme", "light")
     
     }
 
