@@ -4,6 +4,9 @@
 ## Quick Guide to Building a Simple Dark Mode Feature
  Follow these steps to create a basic dark mode toggle switch using HTML, CSS, and JavaScript. This implementation also saves the user’s theme preference with  `localStorage`, so the dark mode persists across sessions.
 
+ preview: 
+ <img src="./preview.png" alt="Icon">
+
 **Step1: create index.html . you can copy the html file from my github .**
 Start by setting up a simple HTML structure. You can also find this code on my  GitHub. Here’s the main toggle button:
 
@@ -21,17 +24,28 @@ index.html
 Define the base styles for the toggle switch and the circle indicator:
 
     #dark{
+    
     display: inline-block;
+    
     width: 50px;
-    border: 1px solid #f0cff0;
+    
+    border: 1px  solid  #f0cff0;
+    
     border-radius: 25px;
-}
-#circle{
+    
+    }
+
+    #circle{
+    
     width: 20px;
+    
     height: 20px;
+    
     border-radius: 100%;
+    
     background-color: #ffcc00;
-}
+    
+    }
 
 ## - Now, create additional classes to toggle the circle position and apply dark mode styling:
 
@@ -76,7 +90,7 @@ Define the functions to add or remove dark mode styling based on the theme setti
 
   
 
-Let’s create them:
+Let’s create darkMode & LightMode function:
 
     function  darkMode() {
     body.classList.add("dark_mode")
@@ -87,18 +101,12 @@ Let’s create them:
     }
     
     function  lightMode() {
-    
     body.classList.remove("dark_mode");
-    
     circle.classList.remove("toggle")
-    
     circle.style.background  =  "#fff";
-    
     localStorage.setItem("theme", "light")
     
-   }
-    
-      
+    }
 
 ### Step 6: Add Toggle Functionality to the Button
 
